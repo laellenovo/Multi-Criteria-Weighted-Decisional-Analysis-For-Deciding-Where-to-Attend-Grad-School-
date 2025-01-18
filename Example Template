@@ -1,0 +1,50 @@
+def calculate_weighted_score(score, max_score, weight):
+    return (score / max_score) * weight
+
+def calculate_total_score(mentor_scores, program_scores, school_scores, lab_scores, intuition_score):
+    # Variable 1: Mentor(s) (weight 35%)
+    mentor_max_score = 93
+    mentor_weight = 0.35
+    mentor_score = sum(mentor_scores) / len(mentor_scores)
+    weighted_mentor_score = calculate_weighted_score(mentor_score, mentor_max_score, mentor_weight)
+    
+    # Variable 2: Program/Degree (weight 25%)
+    program_max_score = 79
+    program_weight = 0.25
+    program_score = sum(program_scores) / len(program_scores)
+    weighted_program_score = calculate_weighted_score(program_score, program_max_score, program_weight)
+    
+    # Variable 3: School (weight 15%)
+    school_max_score = 111
+    school_weight = 0.15
+    school_score = sum(school_scores) / len(school_scores)
+    weighted_school_score = calculate_weighted_score(school_score, school_max_score, school_weight)
+    
+    # Variable 4: Lab (weight 20%)
+    lab_max_score = 29
+    lab_weight = 0.20
+    lab_score = sum(lab_scores) / len(lab_scores)
+    weighted_lab_score = calculate_weighted_score(lab_score, lab_max_score, lab_weight)
+    
+    # Variable 5: Irrational Intuition (weight 5%)
+    intuition_max_score = 3
+    intuition_weight = 0.05
+    weighted_intuition_score = calculate_weighted_score(intuition_score, intuition_max_score, intuition_weight)
+    
+    # Grand Total Score Calculation
+    total_score = (weighted_mentor_score + weighted_program_score + weighted_school_score + weighted_lab_score + weighted_intuition_score)
+    grand_total_percentage = total_score * 100
+    return grand_total_percentage
+
+# Example usage
+mentor_scores = [3, 2, 3, 2, 3, 2, 3, 3, 3]  # Example scores for mentor criteria
+program_scores = [3, 2, 3, 2, 3, 2, 3, 3, 2, 1]  # Example scores for program criteria
+school_scores = [3, 1, 2, 3, 3, 3, 2, 3, 1]  # Example scores for school criteria
+lab_scores = [2, 3, 2, 2, 1]  # Example scores for lab criteria
+intuition_score = 3  # Example intuition score (1 to 3)
+
+# Calculate grand total
+grand_total = calculate_total_score(mentor_scores, program_scores, school_scores, lab_scores, intuition_score)
+
+# Print the result
+print(f"Grand Total Chance of Success: {grand_total:.2f}%")
