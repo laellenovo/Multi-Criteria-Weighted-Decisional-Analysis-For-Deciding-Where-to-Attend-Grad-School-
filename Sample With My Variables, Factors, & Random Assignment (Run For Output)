@@ -1,0 +1,157 @@
+# Define variables with scores assigned to each factor
+# Mentor: Dr. Giggleworth
+mentor_scores = {
+    "research_interest_alignment": 2,
+    "methods_interest_alignment": 3,
+    "personality_alignment": 1,
+    "availability_response_time": 2,
+    "ego": 3,
+    "intimidating_approachability": 1,
+    "gender": 3,
+    "bada$$ery": 2,
+    "age": 3,
+    "h_index": 1,
+    "academic_community_reputation": 2,
+    "academic_family_tree": 3,
+    "prestige_level": 3,
+    "colleagues_connections": 2,
+    "mentorship_opportunities": 2,
+    "support_for_mentees": 3,
+    "alma_mater": 2,
+    "CV_accolades": 3,
+    "RateMyProfessor_score": 2,
+    "graduate_student_opinions": 3,
+    "former_mentees": 1,
+    "mentor_mentee_ratio": 3,
+    "graduation_timeline": 2,
+    "success_of_mentees": 3,
+    "funding_track_record": 2,
+    "project_interest_diversity": 3,
+    "shared_values": 2,
+    "difficulty_rigor_level": 3,
+    "degree_of_oversight": 1,
+    "networking_web_presence": 2,
+    "job_stability": 3
+}
+
+# Program/Degree: PhD in Synaptic Shenanigans
+program_scores = {
+    "program_specific_perception": 2,
+    "departmental_drama": 1,
+    "Carnegie_Classification": 3,
+    "terminal_program_status": 2,
+    "program_philosophy": 2,
+    "degree_name": 3,
+    "dean_perception": 2,
+    "specialized_coursework": 1,
+    "transfer_credit_opportunity": 2,
+    "course_sizes": 1,
+    "overall_curriculum": 3,
+    "teaching_opportunities": 3,
+    "interdisciplinary_opportunities": 2,
+    "interdisciplinary_outside_university": 3,
+    "rigor_fit": 2,
+    "neuroimaging_facilities": 1,
+    "library_resources": 3,
+    "graduate_base_stipend": 2,
+    "assistantship_fellowship": 3,
+    "insurance_quality": 3,
+    "diversity_of_affiliates": 2,
+    "stand_out_student_potential": 2,
+    "networking_conferences": 1,
+    "field_specific_seminars": 2,
+    "career_placement_outcomes": 1,
+    "retention_rate": 3,
+    "IRB_pain_level": 2,
+    "non_academic_events": 1
+}
+
+# School: Mind's Eye University
+school_scores = {
+    "public_perception": 2,
+    "gym_fitness_center": 2,
+    "location": 3,
+    "political_alignment": 2,
+    "campus_appeal": 3,
+    "student_body_size": 2,
+    "athletics": 1,
+    "activities_on_campus": 2,
+    "cost_of_living": 3,
+    "safety": 2,
+    "mental_health_resources": 2,
+    "on_campus_food": 1,
+    "proximity_to_home": 3,
+    "climate": 3,
+    "diversity_of_students": 3,
+    "accreditation_affiliation": 3,
+    "parking_availability": 2,
+    "activities_nearby": 3,
+    "non_funded_costs": 1,
+    "support_services": 2,
+    "clubs_organizations": 2,
+    "party_scene": 1,
+    "religious_affiliation": 3,
+    "community_vibe": 3,
+    "walkability": 3,
+    "president_perception": 2,
+    "alumni_network": 2,
+    "trajectory": 3,
+    "buildings_facilities": 3,
+    "clarity_of_resources": 3,
+    "social_media_presence": 2,
+    "work_life_balance": 3,
+    "funding_for_improvements": 2,
+    "dating_outlook": 1,
+    "relocation_difficulty": 3,
+    "personal_clout": 1,
+    "confidence_in_success": 3
+}
+
+# Lab: Unlimited Budget Laboratory
+lab_scores = {
+    "size": 2,
+    "student_personalities": 3,
+    "academic_motivation": 2,
+    "recognition_level": 3,
+    "name": 1,
+    "morale_collaboration": 3,
+    "affiliation_network": 3,
+    "media_presence": 2,
+    "fun_factor": 1,
+    "reputation_comparison": 3
+}
+
+# Irrational Intuition: A Gut Feeling With No True Logic, Just Dopamine Talking
+intuition_score = 3
+
+# Weighting Factors
+mentor_weight = 0.35
+program_weight = 0.25
+school_weight = 0.15
+lab_weight = 0.20
+intuition_weight = 0.05
+
+# Function to calculate weighted score for each variable
+def weighted_score(scores, max_score, weight):
+    total_score = sum(scores.values())
+    return (total_score / max_score) * weight
+
+# Calculate total weighted scores
+mentor_score = weighted_score(mentor_scores, 93, mentor_weight)
+program_score = weighted_score(program_scores, 79, program_weight)
+school_score = weighted_score(school_scores, 111, school_weight)
+lab_score = weighted_score(lab_scores, 29, lab_weight)
+intuition_score_weighted = intuition_score * intuition_weight
+
+# Total score calculation
+total_score = mentor_score + program_score + school_score + lab_score + intuition_score_weighted
+total_percentage = total_score * 100
+
+# Print Results
+print("Grad School Success Analysis Results")
+print(f"Mentor Score (Dr. Giggleworth): {mentor_score * 100:.2f}%")
+print(f"Program Score (PhD in Synaptic Shenanigans): {program_score * 100:.2f}%")
+print(f"School Score (Mind's Eye University): {school_score * 100:.2f}%")
+print(f"Lab Score (Unlimited Budget Laboratory): {lab_score * 100:.2f}%")
+print(f"Irrational Intuition (A Gut Feeling With No True Logic, Just Dopamine Talking): {intuition_score_weighted * 100:.2f}%")
+print(f"Total Success Percentage: {total_percentage:.2f}%")
