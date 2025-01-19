@@ -1,0 +1,131 @@
+# Mentor Evaluation Criteria with Order of Importance
+criteria = [
+    ("research interest alignment", 3),
+    ("methods interest alignment", 3),
+    ("personality alignment", 2),
+    ("availability/response time", 3),
+    ("ego (confidence/competence factor)", 1),
+    ("intimidating-ness/approachability", 2),
+    ("gender (female preferred)", 2),
+    ("bada$$ery", 2),
+    ("age", 2),
+    ("h-index", 1),
+    ("academic community reputation", 2),
+    ("academic family tree", 1),
+    ("prestige level compared to academic parity in the same department", 2),
+    ("colleagues/connections/co-authors", 3),
+    ("other mentorship opportunities if issues arise", 1),
+    ("support/endorsement for mentees", 3),
+    ("alma mater(s)", 1),
+    ("CV accolades/positions held", 2),
+    ("RateMyProfessor score", 1),
+    ("graduate student opinions", 2),
+    ("# of former mentees", 1),
+    ("typical mentor-mentee ratio", 2),
+    ("graduation timeline of former mentees", 1),
+    ("success of former mentees", 3),
+    ("funding track record", 3),
+    ("project/interest diversity/flexibility", 3),
+    ("shared values", 2),
+    ("difficulty/rigor level fit", 2),
+    ("degree of oversight (micromanagement→full autonomy)", 3),
+    ("networking/web presence", 1),
+    ("perceived job stability/tenure status within current school/lab", 2),
+# Program/Degree Evaluation Criteria with Order of Importance
+criteria
+program_criteria = [
+    ("program-specific public perception/elitism", 3),
+    ("collaboration/competition departmental drama atmosphere", 2),
+    ("Carnegie Classification", 2),
+    ("terminal program status (MS/PhD)", 1),
+    ("program philosophy/structure", 2),
+    ("degree type/name", 1),
+    ("dean public perception", 1),
+    ("availability of specialized coursework of interest", 2),
+    ("transfer credit opportunity", 1),
+    ("course sizes (instructor-student ratio)", 2),
+    ("overall curriculum", 3),
+    ("teaching opportunities", 3),
+    ("interdisciplinary opportunities within the university", 1),
+    ("interdisciplinary/resource opportunities outside the university", 1),
+    ("rigor fit", 2),
+    ("neuroimaging facilities/research method availability", 3),
+    ("library resources", 2),
+    ("graduate base stipend", 3),
+    ("assistantship/fellowship/external funding opportunities", 3),
+    ("insurance offered & quality", 3),
+    ("diversity of program affiliates", 2),
+    ("potential to be a stand-out student", 3),
+    ("opportunities for networking conferences/presentations", 3),
+    ("field-specific seminar/event offerings on-campus", 2),
+    ("overall career placement outcomes", 3),
+    ("retention rate", 3),
+    ("IRB pain in the a$$ level", 1),
+    ("non-academic departmental events", 1),
+# School Evaluation Criteria with Order of Importance
+criteria
+school_criteria = [
+    ("overall public perception/elitism", 3),
+    ("gym/on-campus fitness center", 1),
+    ("location", 3),
+    ("political alignment", 1),
+    ("campus appeal", 2),
+    ("size of student body", 1),
+    ("athletics", 1),
+    ("activities on campus", 2),
+    ("cost of living", 3),
+    ("safety", 2),
+    ("mental health resources", 3),
+    ("on-campus food offerings", 1),
+    ("proximity to home/family", 3),
+    ("weather/climate", 2),
+    ("diversity of student body", 2),
+    ("accreditation/league affiliation", 3),
+    ("parking availability/cost", 1),
+    ("activities close to campus", 2),
+    ("non-funded potential costs of attendance", 3),
+    ("campus offices/support services", 2),
+    ("clubs/organizations", 1),
+    ("party scene", 1),
+    ("religious affiliation", 1),
+    ("community vibe", 3),
+    ("walkability", 2),
+    ("current President’s public perception", 1),
+    ("alumni network", 1),
+    ("perceived trajectory", 2),
+    ("buildings/facilities", 3),
+    ("clarity of webpages/resources", 1),
+    ("social media presence", 1),
+    ("perceived work-life balance/well-being of students", 3),
+    ("funding for general improvements", 1),
+    ("dating outlook", 1),
+    ("relocation difficulty", 3),
+    ("personal clout/bragging rights", 2),
+    ("confidence in my ability to succeed/thrive", 2),
+# Lab Evaluation Criteria with Order of Importance
+criteria
+lab_criteria = [
+    ("size", 2),
+    ("student member personalities", 3),
+    ("student member academic motivation", 2),
+    ("recognition level", 2),
+    ("name", 1),
+    ("morale/collaboration", 3),
+    ("affiliation with a greater lab network", 1),
+    ("website/media presence and appeal", 1),
+    ("fun factor", 2),
+    ("reputation compared to other university-specific lab parity", 1),
+# Irrational Intuition Evaluation Criteria with Order of Importance
+criteria
+irrational_intuition_criteria = [
+    ("Intuition score", 3)
+
+
+
+
+
+
+
+
+
+
