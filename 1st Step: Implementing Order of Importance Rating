@@ -1,0 +1,315 @@
+# Define Mentor Evaluation Criteria with Order of Importance and Score Ranges (1 to 3)
+mentor_scores = {
+    "research_interest_alignment": 3,  # Rank: 3 (best outcome)
+    "methods_interest_alignment": 3,  # Rank: 3 (best outcome)
+    "personality_alignment": 2,  # Rank: 2 (medium outcome)
+    "availability_response_time": 3,  # Rank: 3 (best outcome)
+    "ego": 1,  # Rank: 1 (worst outcome)
+    "intimidating_approachability": 2,  # Rank: 2 (medium outcome)
+    "gender": 2,  # Rank: 2 (male: 1, female: 3, preferred: 3)
+    "bada$$ery": 2,  # Rank: 2 (medium outcome)
+    "age": 2,  # Rank: 2 (medium outcome)
+    "h_index": 1,  # Rank: 1 (worst outcome)
+    "academic_community_reputation": 2,  # Rank: 2 (medium outcome)
+    "academic_family_tree": 1,  # Rank: 1 (worst outcome)
+    "prestige_level_parity": 2,  # Rank: 2 (medium outcome)
+    "colleagues_connections": 3,  # Rank: 3 (best outcome)
+    "backup_mentorship_opportunities": 1,  # Rank: 1 (worst outcome)
+    "support_for_mentees": 3,  # Rank: 3 (best outcome)
+    "alma_mater": 1,  # Rank: 1 (worst outcome)
+    "CV_accolades": 2,  # Rank: 2 (medium outcome)
+    "RateMyProfessor_score": 1,  # Rank: 1 (worst outcome)
+    "graduate_student_opinions": 2,  # Rank: 2 (medium outcome)
+    "former_mentees": 1,  # Rank: 1 (worst outcome)
+    "mentor_mentee_ratio": 2,  # Rank: 2 (medium outcome)
+    "graduation_timeline": 1,  # Rank: 1 (worst outcome)
+    "success_of_mentees": 3,  # Rank: 3 (best outcome)
+    "funding_track_record": 3,  # Rank: 3 (best outcome)
+    "project_interest_diversity": 3,  # Rank: 3 (best outcome)
+    "shared_values": 2,  # Rank: 2 (medium outcome)
+    "difficulty_rigor_level": 2,  # Rank: 2 (medium outcome)
+    "degree_of_oversight": 3,  # Rank: 3 (best outcome)
+    "networking_web_presence": 1,  # Rank: 1 (worst outcome)
+    "job_stability": 2  # Rank: 2 (medium outcome)
+}
+
+# Define the importance of each criterion, based on the provided weights
+factor_weights = {
+    "research_interest_alignment": 0.04545,  # High importance (3)
+    "methods_interest_alignment": 0.04545,  # High importance (3)
+    "personality_alignment": 0.03333,       # Medium importance (2)
+    "availability_response_time": 0.04545,  # High importance (3)
+    "ego": 0.02222,                         # Low importance (1)
+    "intimidating_approachability": 0.03333, # Medium importance (2)
+    "gender": 0.03333,                      # Medium importance (2)
+    "bada$$ery": 0.03333,                   # Medium importance (2)
+    "age": 0.03333,                         # Medium importance (2)
+    "h_index": 0.02222,                     # Low importance (1)
+    "academic_community_reputation": 0.03333, # Medium importance (2)
+    "academic_family_tree": 0.02222,        # Low importance (1)
+    "prestige_level_parity": 0.03333,       # Medium importance (2)
+    "colleagues_connections": 0.04545,      # High importance (3)
+    "backup_mentorship_opportunities": 0.02222, # Low importance (1)
+    "support_for_mentees": 0.04545,         # High importance (3)
+    "alma_mater": 0.02222,                  # Low importance (1)
+    "CV_accolades": 0.03333,                # Medium importance (2)
+    "RateMyProfessor_score": 0.02222,       # Low importance (1)
+    "graduate_student_opinions": 0.03333,   # Medium importance (2)
+    "former_mentees": 0.02222,              # Low importance (1)
+    "mentor_mentee_ratio": 0.03333,         # Medium importance (2)
+    "graduation_timeline": 0.02222,         # Low importance (1)
+    "success_of_mentees": 0.04545,          # High importance (3)
+    "funding_track_record": 0.04545,        # High importance (3)
+    "project_interest_diversity": 0.04545,  # High importance (3)
+    "shared_values": 0.03333,               # Medium importance (2)
+    "difficulty_rigor_level": 0.03333,      # Medium importance (2)
+    "degree_of_oversight": 0.04545,         # High importance (3)
+    "networking_web_presence": 0.02222,     # Low importance (1)
+    "job_stability": 0.03333                # Medium importance (2)
+}
+
+# Function to calculate the weighted score based on the provided scores and weights for each factor
+def calculate_weighted_score(scores, weights):
+    total_score = 0
+    # Iterate over each factor in the scores and multiply by the corresponding weight
+    for factor, score in scores.items():
+        total_score += score * weights.get(factor, 0)  # Get the weight for the factor, default to 0 if not found
+    return total_score
+
+# Call the function to calculate the weighted score for the mentor
+mentor_weighted_score = calculate_weighted_score(mentor_scores, factor_weights)
+
+# Print the weighted score for the mentor
+print(f"The weighted score for the mentor is: {mentor_weighted_score:.4f}")
+
+# Define Program/Degree Evaluation Criteria with Order of Importance and Score Ranges (1 to 3)
+program_scores = {
+    "program_specific_perception": 3,  # Rank: 3 (best outcome)
+    "collaboration_competition_departmental_drama": 2,  # Rank: 2 (medium outcome)
+    "Carnegie_Classification": 2,  # Rank: 2 (medium outcome)
+    "terminal_program_status": 1,  # Rank: 1 (worst outcome)
+    "program_philosophy_structure": 2,  # Rank: 2 (medium outcome)
+    "degree_type_name": 1,  # Rank: 1 (worst outcome)
+    "dean_public_perception": 1,  # Rank: 1 (worst outcome)
+    "specialized_coursework_availability": 2,  # Rank: 2 (medium outcome)
+    "transfer_credit_opportunity": 1,  # Rank: 1 (worst outcome)
+    "course_sizes": 2,  # Rank: 2 (medium outcome)
+    "overall_curriculum": 3,  # Rank: 3 (best outcome)
+    "teaching_opportunities": 3,  # Rank: 3 (best outcome)
+    "interdisciplinary_opportunities_within_university": 1,  # Rank: 1 (worst outcome)
+    "interdisciplinary_resource_opportunities_outside_university": 1,  # Rank: 1 (worst outcome)
+    "rigor_fit": 2,  # Rank: 2 (medium outcome)
+    "neuroimaging_facilities": 3,  # Rank: 3 (best outcome)
+    "library_resources": 2,  # Rank: 2 (medium outcome)
+    "graduate_base_stipend": 3,  # Rank: 3 (best outcome)
+    "assistantship_fellowship_opportunities": 3,  # Rank: 3 (best outcome)
+    "insurance_quality": 3,  # Rank: 3 (best outcome)
+    "diversity_of_affiliates": 2,  # Rank: 2 (medium outcome)
+    "stand_out_student_potential": 3,  # Rank: 3 (best outcome)
+    "networking_conferences_opportunities": 3,  # Rank: 3 (best outcome)
+    "field_specific_seminars_on_campus": 2,  # Rank: 2 (medium outcome)
+    "career_placement_outcomes": 3,  # Rank: 3 (best outcome)
+    "retention_rate": 3,  # Rank: 3 (best outcome)
+    "IRB_pain_level": 1,  # Rank: 1 (worst outcome)
+    "non_academic_events": 1  # Rank: 1 (worst outcome)
+}
+
+# Define the importance of each criterion, based on the provided weights
+program_factor_weights = {
+    "program_specific_perception": 0.04545,  # High importance (3)
+    "collaboration_competition_departmental_drama": 0.03333,  # Medium importance (2)
+    "Carnegie_Classification": 0.03333,  # Medium importance (2)
+    "terminal_program_status": 0.02222,  # Low importance (1)
+    "program_philosophy_structure": 0.03333,  # Medium importance (2)
+    "degree_type_name": 0.02222,  # Low importance (1)
+    "dean_public_perception": 0.02222,  # Low importance (1)
+    "specialized_coursework_availability": 0.03333,  # Medium importance (2)
+    "transfer_credit_opportunity": 0.02222,  # Low importance (1)
+    "course_sizes": 0.03333,  # Medium importance (2)
+    "overall_curriculum": 0.04545,  # High importance (3)
+    "teaching_opportunities": 0.04545,  # High importance (3)
+    "interdisciplinary_opportunities_within_university": 0.02222,  # Low importance (1)
+    "interdisciplinary_resource_opportunities_outside_university": 0.02222,  # Low importance (1)
+    "rigor_fit": 0.03333,  # Medium importance (2)
+    "neuroimaging_facilities": 0.04545,  # High importance (3)
+    "library_resources": 0.03333,  # Medium importance (2)
+    "graduate_base_stipend": 0.04545,  # High importance (3)
+    "assistantship_fellowship_opportunities": 0.04545,  # High importance (3)
+    "insurance_quality": 0.04545,  # High importance (3)
+    "diversity_of_affiliates": 0.03333,  # Medium importance (2)
+    "stand_out_student_potential": 0.04545,  # High importance (3)
+    "networking_conferences_opportunities": 0.04545,  # High importance (3)
+    "field_specific_seminars_on_campus": 0.03333,  # Medium importance (2)
+    "career_placement_outcomes": 0.04545,  # High importance (3)
+    "retention_rate": 0.04545,  # High importance (3)
+    "IRB_pain_level": 0.02222,  # Low importance (1)
+    "non_academic_events": 0.02222  # Low importance (1)
+}
+
+# Function to calculate the weighted score based on the provided scores and weights for each factor
+def calculate_weighted_score(scores, weights):
+    total_score = 0
+    # Iterate over each factor in the scores and multiply by the corresponding weight
+    for factor, score in scores.items():
+        total_score += score * weights.get(factor, 0)  # Get the weight for the factor, default to 0 if not found
+    return total_score
+
+# Call the function to calculate the weighted score for the program
+program_weighted_score = calculate_weighted_score(program_scores, program_factor_weights)
+
+# Print the weighted score for the program
+print(f"The weighted score for the program is: {program_weighted_score:.4f}")
+
+# Define School Evaluation Criteria with Order of Importance and Score Ranges (1 to 3)
+school_scores = {
+    "overall_public_perception": 3,  # Rank: 3 (best outcome)
+    "gym_on_campus_fitness_center": 1,  # Rank: 1 (worst outcome)
+    "location": 3,  # Rank: 3 (best outcome)
+    "political_alignment": 1,  # Rank: 1 (worst outcome)
+    "campus_appeal": 2,  # Rank: 2 (medium outcome)
+    "size_of_student_body": 1,  # Rank: 1 (worst outcome)
+    "athletics": 1,  # Rank: 1 (worst outcome)
+    "activities_on_campus": 2,  # Rank: 2 (medium outcome)
+    "cost_of_living": 3,  # Rank: 3 (best outcome)
+    "safety": 2,  # Rank: 2 (medium outcome)
+    "mental_health_resources": 3,  # Rank: 3 (best outcome)
+    "on_campus_food_offerings": 1,  # Rank: 1 (worst outcome)
+    "proximity_to_home_family": 3,  # Rank: 3 (best outcome)
+    "weather_climate": 2,  # Rank: 2 (medium outcome)
+    "diversity_of_student_body": 2,  # Rank: 2 (medium outcome)
+    "accreditation_league_affiliation": 3,  # Rank: 3 (best outcome)
+    "parking_availability_cost": 1,  # Rank: 1 (worst outcome)
+    "activities_close_to_campus": 2,  # Rank: 2 (medium outcome)
+    "non_funded_potential_costs": 3,  # Rank: 3 (best outcome)
+    "campus_offices_support_services": 2,  # Rank: 2 (medium outcome)
+    "clubs_organizations": 1,  # Rank: 1 (worst outcome)
+    "party_scene": 1,  # Rank: 1 (worst outcome)
+    "religious_affiliation": 1,  # Rank: 1 (worst outcome)
+    "community_vibe": 3,  # Rank: 3 (best outcome)
+    "walkability": 2,  # Rank: 2 (medium outcome)
+    "current_President_public_perception": 1,  # Rank: 1 (worst outcome)
+    "alumni_network": 1,  # Rank: 1 (worst outcome)
+    "perceived_trajectory": 2,  # Rank: 2 (medium outcome)
+    "buildings_facilities": 3,  # Rank: 3 (best outcome)
+    "clarity_of_webpages_resources": 1,  # Rank: 1 (worst outcome)
+    "social_media_presence": 1,  # Rank: 1 (worst outcome)
+    "perceived_work_life_balance": 3,  # Rank: 3 (best outcome)
+    "funding_for_general_improvements": 1,  # Rank: 1 (worst outcome)
+    "dating_outlook": 1,  # Rank: 1 (worst outcome)
+    "relocation_difficulty": 3,  # Rank: 3 (best outcome)
+    "personal_clout": 2,  # Rank: 2 (medium outcome)
+    "confidence_in_success": 2  # Rank: 2 (medium outcome)
+}
+
+# Define the importance of each criterion, based on the provided weights
+school_factor_weights = {
+    "overall_public_perception": 0.04545,  # High importance (3)
+    "gym_on_campus_fitness_center": 0.02222,  # Low importance (1)
+    "location": 0.04545,  # High importance (3)
+    "political_alignment": 0.02222,  # Low importance (1)
+    "campus_appeal": 0.03333,  # Medium importance (2)
+    "size_of_student_body": 0.02222,  # Low importance (1)
+    "athletics": 0.02222,  # Low importance (1)
+    "activities_on_campus": 0.03333,  # Medium importance (2)
+    "cost_of_living": 0.04545,  # High importance (3)
+    "safety": 0.03333,  # Medium importance (2)
+    "mental_health_resources": 0.04545,  # High importance (3)
+    "on_campus_food_offerings": 0.02222,  # Low importance (1)
+    "proximity_to_home_family": 0.04545,  # High importance (3)
+    "weather_climate": 0.03333,  # Medium importance (2)
+    "diversity_of_student_body": 0.03333,  # Medium importance (2)
+    "accreditation_league_affiliation": 0.04545,  # High importance (3)
+    "parking_availability_cost": 0.02222,  # Low importance (1)
+    "activities_close_to_campus": 0.03333,  # Medium importance (2)
+    "non_funded_potential_costs": 0.04545,  # High importance (3)
+    "campus_offices_support_services": 0.03333,  # Medium importance (2)
+    "clubs_organizations": 0.02222,  # Low importance (1)
+    "party_scene": 0.02222,  # Low importance (1)
+    "religious_affiliation": 0.02222,  # Low importance (1)
+    "community_vibe": 0.04545,  # High importance (3)
+    "walkability": 0.03333,  # Medium importance (2)
+    "current_President_public_perception": 0.02222,  # Low importance (1)
+    "alumni_network": 0.02222,  # Low importance (1)
+    "perceived_trajectory": 0.03333,  # Medium importance (2)
+    "buildings_facilities": 0.04545,  # High importance (3)
+    "clarity_of_webpages_resources": 0.02222,  # Low importance (1)
+    "social_media_presence": 0.02222,  # Low importance (1)
+    "perceived_work_life_balance": 0.04545,  # High importance (3)
+    "funding_for_general_improvements": 0.02222,  # Low importance (1)
+    "dating_outlook": 0.02222,  # Low importance (1)
+    "relocation_difficulty": 0.04545,  # High importance (3)
+    "personal_clout": 0.03333,  # Medium importance (2)
+    "confidence_in_success": 0.03333  # Medium importance (2)
+}
+
+# Function to calculate the weighted score based on the provided scores and weights for each factor
+def calculate_weighted_score(scores, weights):
+    total_score = 0
+    # Iterate over each factor in the scores and multiply by the corresponding weight
+    for factor, score in scores.items():
+        total_score += score * weights.get(factor, 0)  # Get the weight for the factor, default to 0 if not found
+    return total_score
+
+# Call the function to calculate the weighted score for the school
+school_weighted_score = calculate_weighted_score(school_scores, school_factor_weights)
+
+# Print the weighted score for the school
+print(f"The weighted score for the school is: {school_weighted_score:.4f}")
+
+# Define Lab Evaluation Criteria with Order of Importance and Score Ranges (1 to 3)
+lab_scores = {
+    "size": 2,  # Rank: 2 (medium outcome)
+    "student_member_personalities": 3,  # Rank: 3 (best outcome)
+    "student_member_academic_motivation": 2,  # Rank: 2 (medium outcome)
+    "recognition_level": 2,  # Rank: 2 (medium outcome)
+    "name": 1,  # Rank: 1 (worst outcome)
+    "morale_collaboration": 3,  # Rank: 3 (best outcome)
+    "affiliation_with_greater_lab_network": 1,  # Rank: 1 (worst outcome)
+    "website_media_presence_and_appeal": 1,  # Rank: 1 (worst outcome)
+    "fun_factor": 2,  # Rank: 2 (medium outcome)
+    "reputation_compared_to_other_university_lab_parity": 1  # Rank: 1 (worst outcome)
+}
+
+# Define the importance of each criterion, based on the provided weights
+lab_factor_weights = {
+    "size": 0.03333,  # Medium importance (2)
+    "student_member_personalities": 0.04545,  # High importance (3)
+    "student_member_academic_motivation": 0.03333,  # Medium importance (2)
+    "recognition_level": 0.03333,  # Medium importance (2)
+    "name": 0.02222,  # Low importance (1)
+    "morale_collaboration": 0.04545,  # High importance (3)
+    "affiliation_with_greater_lab_network": 0.02222,  # Low importance (1)
+    "website_media_presence_and_appeal": 0.02222,  # Low importance (1)
+    "fun_factor": 0.03333,  # Medium importance (2)
+    "reputation_compared_to_other_university_lab_parity": 0.02222  # Low importance (1)
+}
+
+# Function to calculate the weighted score based on the provided scores and weights for each factor
+def calculate_weighted_score(scores, weights):
+    total_score = 0
+    # Iterate over each factor in the scores and multiply by the corresponding weight
+    for factor, score in scores.items():
+        total_score += score * weights.get(factor, 0)  # Get the weight for the factor, default to 0 if not found
+    return total_score
+
+# Call the function to calculate the weighted score for the lab
+lab_weighted_score = calculate_weighted_score(lab_scores, lab_factor_weights)
+
+# Print the weighted score for the lab
+print(f"The weighted score for the lab is: {lab_weighted_score:.4f}")
+
+# Define the Intuition Score
+intuition_score = 3  # Rank: 3 (best outcome)
+
+# Define the weight for intuition (based on given weight in your instructions)
+intuition_weight = 0.05  # 5% weight
+
+# Function to calculate the weighted intuition score
+def calculate_intuition_weighted_score(score, weight):
+    return score * weight
+
+# Call the function to calculate the weighted intuition score
+intuition_weighted_score = calculate_intuition_weighted_score(intuition_score, intuition_weight)
+
+# Print the weighted intuition score
+print(f"The weighted intuition score is: {intuition_weighted_score:.4f}")
