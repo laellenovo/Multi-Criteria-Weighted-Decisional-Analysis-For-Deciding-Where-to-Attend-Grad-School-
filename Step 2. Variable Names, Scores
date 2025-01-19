@@ -13,9 +13,9 @@ mentor_scores = {
     "h_index": 1,
     "academic_community_reputation": 2,
     "academic_family_tree": 3,
-    "prestige_level": 3,
+    "prestige_level_parity": 3,
     "colleagues_connections": 2,
-    "mentorship_opportunities": 2,
+    "backup_mentorship_opportunities": 2,
     "support_for_mentees": 3,
     "alma_mater": 2,
     "CV_accolades": 3,
@@ -130,28 +130,3 @@ program_weight = 0.25
 school_weight = 0.15
 lab_weight = 0.20
 intuition_weight = 0.05
-
-# Function to calculate weighted score for each variable
-def weighted_score(scores, max_score, weight):
-    total_score = sum(scores.values())
-    return (total_score / max_score) * weight
-
-# Calculate total weighted scores
-mentor_score = weighted_score(mentor_scores, 93, mentor_weight)
-program_score = weighted_score(program_scores, 79, program_weight)
-school_score = weighted_score(school_scores, 111, school_weight)
-lab_score = weighted_score(lab_scores, 29, lab_weight)
-intuition_score_weighted = intuition_score * intuition_weight
-
-# Total score calculation
-total_score = mentor_score + program_score + school_score + lab_score + intuition_score_weighted
-total_percentage = total_score * 100
-
-# Print Results
-print("Grad School Success Analysis Results")
-print(f"Mentor Score (Dr. Giggleworth): {mentor_score * 100:.2f}%")
-print(f"Program Score (PhD in Synaptic Shenanigans): {program_score * 100:.2f}%")
-print(f"School Score (Mind's Eye University): {school_score * 100:.2f}%")
-print(f"Lab Score (Unlimited Budget Laboratory): {lab_score * 100:.2f}%")
-print(f"Irrational Intuition (A Gut Feeling With No True Logic, Just Dopamine Talking): {intuition_score_weighted * 100:.2f}%")
-print(f"Total Success Percentage: {total_percentage:.2f}%")
