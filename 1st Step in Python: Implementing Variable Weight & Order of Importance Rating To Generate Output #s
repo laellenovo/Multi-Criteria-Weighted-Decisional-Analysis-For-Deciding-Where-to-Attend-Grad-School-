@@ -247,3 +247,19 @@ intuition_score = 3  # Rank: 3 (best outcome)
 
 # Define the weight for intuition (based on given weight in your instructions)
 intuition_weight = 0.05  # 5% weight
+
+# Weight for each category
+total_weights = {
+    "mentor_weight": 0.35,
+    "program_weight": 0.25,
+    "school_weight": 0.15,
+    "lab_weight": 0.20,
+    "intuition_weight": 0.05
+}
+
+# Print out the overall weight distribution
+print(f"Mentor Weight: {total_weights['mentor_weight'] * 100}%")
+print(f"Program Weight: {total_weights['program_weight'] * 100}%")
+print(f"School Weight: {total_weights['school_weight'] * 100}%")
+print(f"Lab Weight: {total_weights['lab_weight'] * 100}%")
+print(f"Intuition Weight: {total_weights['intuition_weight'] * 100}%")
