@@ -1,0 +1,380 @@
+# Define mentor
+mentor = "Dr. Giggleworth"
+
+# Define factors and weights for each section
+section1_factors = {
+    "research interest alignment": 3,
+    "methods interest alignment": 3,
+    "availability/response time": 2,
+    "colleagues/connections/co-authors": 3,
+    "support/endorsement for mentees": 1,
+    "success of former mentees": 2,
+    "funding track record": 1,
+    "project/interest diversity/flexibility": 3,
+    "degree of oversight (micromanagement→full autonomy)": 2
+}
+section1_weight = 0.55
+
+section2_factors = {
+    "personality alignment": 2,
+    "intimidating-ness/approachability": 1,
+    "gender (female preferred)": 3,
+    "bada$$ery": 3,
+    "age": 2,
+    "academic community reputation": 2,
+    "typical mentor-mentee ratio": 1,
+    "shared values": 3,
+    "perceived job stability/tenure status within current school/lab": 3,
+    "difficulty/rigor level fit": 2,
+    "graduate student opinions": 2,
+    "CV accolades/positions held": 3,
+    "prestige level compared to academic parity in the same department": 2
+}
+section2_weight = 0.35
+
+section3_factors = {
+    "ego (confidence/competence factor)": 1,
+    "h-index": 1,
+    "academic family tree": 3,
+    "other mentorship opportunities if issues arise": 3,
+    "alma mater(s)": 2,
+    "RateMyProfessor score": 2,
+    "# of former mentees": 1,
+    "graduation timeline of former mentees": 3,
+    "networking/web presence": 2
+}
+section3_weight = 0.1
+
+# Calculate weighted scores for each section
+section1_sum = sum(section1_factors.values()) * section1_weight
+section2_sum = sum(section2_factors.values()) * section2_weight
+section3_sum = sum(section3_factors.values()) * section3_weight
+
+# Print details
+print(f"Mentor: {mentor}\n")
+print("Section 1 Factors and Weighted Sum:")
+for factor, value in section1_factors.items():
+    print(f"{factor}: {value}")
+print(f"Weighted Score (55%): {section1_sum}\n")
+
+print("Section 2 Factors and Weighted Sum:")
+for factor, value in section2_factors.items():
+    print(f"{factor}: {value}")
+print(f"Weighted Score (35%): {section2_sum}\n")
+
+print("Section 3 Factors and Weighted Sum:")
+for factor, value in section3_factors.items():
+    print(f"{factor}: {value}")
+print(f"Weighted Score (10%): {section3_sum}\n")
+
+# Calculate the total weighted score
+total_weighted_score = section1_sum + section2_sum + section3_sum
+print(f"Total Weighted Score: {total_weighted_score}")
+
+# Define program/degree
+program = "PhD in Synaptic Shenanigans"
+
+# Define the scores from each section
+
+# Section 1 (55%)
+section1_factors = {
+    "program-specific public perception/elitism": 3,
+    "overall curriculum": 2,
+    "teaching opportunities": 3,
+    "graduate base stipend": 2,
+    "assistantship/fellowship/external funding opportunities": 1,
+    "insurance offered & quality": 2,
+    "neuroimaging facilities/research method availability": 2,
+    "overall career placement outcomes": 3,
+    "retention rate": 3,
+    "potential to be a stand-out student": 1,
+    "opportunities for networking conferences/presentations": 3
+}
+section1_sum = sum(section1_factors.values())
+section1_weighted_score = section1_sum * 0.55
+
+# Section 2 (35%)
+section2_factors = {
+    "collaboration/competition departmental drama atmosphere": 3,
+    "Carnegie Classification": 1,
+    "rigor fit": 3,
+    "library resources": 2,
+    "diversity of program affiliates": 2,
+    "field-specific seminar/event offerings on-campus": 2,
+    "course sizes (instructor-student ratio)": 1,
+    "availability of specialized coursework of interest": 2,
+    "program philosophy/structure": 2
+}
+section2_sum = sum(section2_factors.values())
+section2_weighted_score = section2_sum * 0.35
+
+# Section 3 (10%)
+section3_factors = {
+    "terminal program status? (MS/PhD)": 1,
+    "degree type/name": 2,
+    "dean public perception": 3,
+    "transfer credit opportunity": 2,
+    "interdisciplinary opportunities within the university": 2,
+    "interdisciplinary/resource opportunities outside the university": 3,
+    "IRB pain in the a$$ level": 1,
+    "non-academic departmental events": 2
+}
+section3_sum = sum(section3_factors.values())
+section3_weighted_score = section3_sum * 0.1
+
+# Calculate the total weighted score
+total_weighted_score = section1_weighted_score + section2_weighted_score + section3_weighted_score
+
+# Print each section's weighted score and the total
+print(f"Section 1 Weighted Score (55%): {section1_weighted_score}")
+print(f"Section 2 Weighted Score (35%): {section2_weighted_score}")
+print(f"Section 3 Weighted Score (10%): {section3_weighted_score}")
+print(f"\nTotal Weighted Score: {total_weighted_score}")
+
+# Define the variable for the school
+school = "Mind’s Eye University"
+
+# Define the factors and their values for section 1
+factors_section1 = {
+    "overall public perception/elitism": 3,
+    "relocation difficulty": 3,
+    "proximity to home/family": 3,
+    "cost of living": 2,
+    "mental health resources": 1,
+    "location": 2,
+    "accreditation/league affiliation": 3,
+    "non-funded potential costs of attendance": 3,
+    "community vibe": 2,
+    "buildings/facilities": 2,
+    "perceived work-life balance/well-being of students": 3
+}
+
+# Print the school name and factors for section 1
+print(f"School: {school}")
+print("Section 1 - Factors and values:")
+for factor, value in factors_section1.items():
+    print(f"{factor}: {value}")
+
+# Calculate the sum of the factor values for section 1
+total_sum_section1 = sum(factors_section1.values())
+print(f"\nSum of factors (Section 1): {total_sum_section1}")
+
+# Multiply the sum by 0.55 for section 1
+weighted_score_section1 = total_sum_section1 * 0.55
+print(f"Weighted score (55% of Section 1): {weighted_score_section1}")
+
+# Define the factors and their values for section 2
+factors_section2 = {
+    "personal clout/bragging rights": 2,
+    "confidence in my ability to succeed/thrive": 2,
+    "activities on campus": 3,
+    "safety": 1,
+    "campus appeal": 2,
+    "campus offices/support services": 3,
+    "weather/climate": 2,
+    "diversity of student body": 3,
+    "walkability": 1,
+    "activities close to campus": 2,
+    "perceived trajectory": 3
+}
+
+# Print the school name and factors for section 2
+print(f"\nSchool: {school}")
+print("Section 2 - Factors and values:")
+for factor, value in factors_section2.items():
+    print(f"{factor}: {value}")
+
+# Calculate the sum of the factor values for section 2
+total_sum_section2 = sum(factors_section2.values())
+print(f"\nSum of factors (Section 2): {total_sum_section2}")
+
+# Multiply the sum by 0.35 for section 2
+weighted_score_section2 = total_sum_section2 * 0.35
+print(f"Weighted score (35% of Section 2): {weighted_score_section2}")
+
+# Define the factors and their values for section 3
+factors_section3 = {
+    "gym/on-campus fitness center": 2,
+    "political alignment": 3,
+    "size of student body": 3,
+    "athletics": 1,
+    "on-campus food offerings": 2,
+    "parking availability/cost": 3,
+    "clubs/organizations": 2,
+    "party scene": 1,
+    "religious affiliation": 3,
+    "current President’s public perception": 2,
+    "alumni network": 3,
+    "clarity of webpages/resources": 2,
+    "social media presence": 3,
+    "funding for general improvements": 3,
+    "dating outlook": 2
+}
+
+# Print the school name and factors for section 3
+print(f"\nSchool: {school}")
+print("Section 3 - Factors and values:")
+for factor, value in factors_section3.items():
+    print(f"{factor}: {value}")
+
+# Calculate the sum of the factor values for section 3
+total_sum_section3 = sum(factors_section3.values())
+print(f"\nSum of factors (Section 3): {total_sum_section3}")
+
+# Multiply the sum by 0.1 for section 3
+weighted_score_section3 = total_sum_section3 * 0.1
+print(f"Weighted score (10% of Section 3): {weighted_score_section3}")
+
+# Add the weighted scores of all three sections
+total_weighted_score = weighted_score_section1 + weighted_score_section2 + weighted_score_section3
+print(f"\nTotal weighted score: {total_weighted_score}")
+
+# Define the first section for the lab
+lab = "Unlimited Budget Laboratory"
+
+# First section factors and calculations
+factors_section1 = {
+    "student member personalities": 2,
+    "morale/collaboration": 3
+}
+
+print(f"Lab: {lab} (Section 1)")
+print("Factors and values (Section 1):")
+for factor, value in factors_section1.items():
+    print(f"{factor}: {value}")
+
+sum_section1 = sum(factors_section1.values())
+weighted_score_section1 = sum_section1 * 0.55
+print(f"\nSum of Section 1 factors: {sum_section1}")
+print(f"Weighted score (55% of Section 1 sum): {weighted_score_section1}\n")
+
+# Second section factors and calculations
+factors_section2 = {
+    "size": 2,
+    "fun factor": 3,
+    "student member academic motivation": 2,
+    "recognition level": 1
+}
+
+print(f"Lab: {lab} (Section 2)")
+print("Factors and values (Section 2):")
+for factor, value in factors_section2.items():
+    print(f"{factor}: {value}")
+
+sum_section2 = sum(factors_section2.values())
+weighted_score_section2 = sum_section2 * 0.35
+print(f"\nSum of Section 2 factors: {sum_section2}")
+print(f"Weighted score (35% of Section 2 sum): {weighted_score_section2}\n")
+
+# Third section factors and calculations
+factors_section3 = {
+    "name": 3,
+    "affiliation with a greater lab network": 2,
+    "website/media presence and appeal": 2,
+    "reputation compared to other university-specific lab parity": 3
+}
+
+print(f"Lab: {lab} (Section 3)")
+print("Factors and values (Section 3):")
+for factor, value in factors_section3.items():
+    print(f"{factor}: {value}")
+
+sum_section3 = sum(factors_section3.values())
+weighted_score_section3 = sum_section3 * 0.1
+print(f"\nSum of Section 3 factors: {sum_section3}")
+print(f"Weighted score (10% of Section 3 sum): {weighted_score_section3}\n")
+
+# Calculate the total of all weighted scores
+total_weighted_score = (
+    weighted_score_section1 + weighted_score_section2 + weighted_score_section3
+)
+
+print(f"Total Weighted Score for '{lab}': {total_weighted_score}")
+
+# Mentor Section Calculations
+mentor_section1_weighted_score = sum(section1_factors.values()) * section1_weight
+mentor_section2_weighted_score = sum(section2_factors.values()) * section2_weight
+mentor_section3_weighted_score = sum(section3_factors.values()) * section3_weight
+
+mentor_total_weighted_score = (
+    mentor_section1_weighted_score +
+    mentor_section2_weighted_score +
+    mentor_section3_weighted_score
+)
+
+# Program/Degree Section Calculations
+program_section1_weighted_score = sum(section1_factors.values()) * 0.55
+program_section2_weighted_score = sum(section2_factors.values()) * 0.35
+program_section3_weighted_score = sum(section3_factors.values()) * 0.1
+
+program_total_weighted_score = (
+    program_section1_weighted_score +
+    program_section2_weighted_score +
+    program_section3_weighted_score
+)
+
+# School Section Calculations
+school_section1_weighted_score = sum(factors_section1.values()) * 0.55
+school_section2_weighted_score = sum(factors_section2.values()) * 0.35
+school_section3_weighted_score = sum(factors_section3.values()) * 0.1
+
+school_total_weighted_score = (
+    school_section1_weighted_score +
+    school_section2_weighted_score +
+    school_section3_weighted_score
+)
+
+# Lab Section Calculations
+lab_section1_weighted_score = sum(factors_section1.values()) * 0.55
+lab_section2_weighted_score = sum(factors_section2.values()) * 0.35
+lab_section3_weighted_score = sum(factors_section3.values()) * 0.1
+
+lab_total_weighted_score = (
+    lab_section1_weighted_score +
+    lab_section2_weighted_score +
+    lab_section3_weighted_score
+)
+
+# Grand Total Calculation
+grand_total_weighted_score = (
+    mentor_total_weighted_score +
+    program_total_weighted_score +
+    school_total_weighted_score +
+    lab_total_weighted_score
+)
+
+print("Grand Total Weighted Score:", grand_total_weighted_score)
+
+# Define the "Intuition" section factors and values (renaming factor)
+intuition_factors = {
+    "cognitive noise & irrationality: just dopamine talking": 3
+}
+
+# Calculate the sum of intuition factors
+intuition_sum = sum(intuition_factors.values())
+print("\nIntuition: Cognitive Noise & Irrationality")
+print("Factors and values:")
+for factor, value in intuition_factors.items():
+    print(f"{factor}: {value}")
+
+# Multiply the sum by 0.05 (5%)
+intuition_weighted_score = intuition_sum * 0.05
+print(f"\nSum of Intuition factors: {intuition_sum}")
+print(f"Weighted score (5% of Intuition): {intuition_weighted_score}")
+
+# Recalculate the grand total including the new "Intuition" variable
+grand_total_weighted_score = (
+    mentor_total_weighted_score +
+    program_total_weighted_score +
+    school_total_weighted_score +
+    lab_total_weighted_score +
+    intuition_weighted_score  # Adding Intuition score here
+)
+
+print(f"\nGrand Total Weighted Score (with Intuition): {grand_total_weighted_score}")
+
+ 
+
+
+
+
