@@ -372,6 +372,75 @@ grand_total_weighted_score = (
 )
 
 print(f"\nGrand Total Weighted Score (with Intuition): {grand_total_weighted_score}")
+# Calculate weighted scores for each section with new overall weights
+
+# Mentor Section Calculations
+mentor_section1_weighted_score = sum(section1_factors.values()) * section1_weight
+mentor_section2_weighted_score = sum(section2_factors.values()) * section2_weight
+mentor_section3_weighted_score = sum(section3_factors.values()) * section3_weight
+mentor_total_score = (
+    mentor_section1_weighted_score +
+    mentor_section2_weighted_score +
+    mentor_section3_weighted_score
+)
+mentor_weighted_score = mentor_total_score * 0.35  # 35% weight
+
+# Program/Degree Section Calculations
+program_section1_weighted_score = sum(section1_factors.values()) * 0.55
+program_section2_weighted_score = sum(section2_factors.values()) * 0.35
+program_section3_weighted_score = sum(section3_factors.values()) * 0.1
+program_total_score = (
+    program_section1_weighted_score +
+    program_section2_weighted_score +
+    program_section3_weighted_score
+)
+program_weighted_score = program_total_score * 0.25  # 25% weight
+
+# School Section Calculations
+school_section1_weighted_score = sum(factors_section1.values()) * 0.55
+school_section2_weighted_score = sum(factors_section2.values()) * 0.35
+school_section3_weighted_score = sum(factors_section3.values()) * 0.1
+school_total_score = (
+    school_section1_weighted_score +
+    school_section2_weighted_score +
+    school_section3_weighted_score
+)
+school_weighted_score = school_total_score * 0.15  # 15% weight
+
+# Lab Section Calculations
+lab_section1_weighted_score = sum(factors_section1.values()) * 0.55
+lab_section2_weighted_score = sum(factors_section2.values()) * 0.35
+lab_section3_weighted_score = sum(factors_section3.values()) * 0.1
+lab_total_score = (
+    lab_section1_weighted_score +
+    lab_section2_weighted_score +
+    lab_section3_weighted_score
+)
+lab_weighted_score = lab_total_score * 0.2  # 20% weight
+
+# Intuition Section Calculations
+intuition_factors = {
+    "cognitive noise & irrationality: just dopamine talking": 3
+}
+intuition_sum = sum(intuition_factors.values())
+intuition_weighted_score = intuition_sum * 0.05  # 5% weight
+
+# Grand Total Calculation
+grand_total_weighted_score = (
+    mentor_weighted_score +
+    program_weighted_score +
+    school_weighted_score +
+    lab_weighted_score +
+    intuition_weighted_score
+)
+
+# Output Results
+print(f"Mentor Weighted Score (35%): {mentor_weighted_score}")
+print(f"Program Weighted Score (25%): {program_weighted_score}")
+print(f"School Weighted Score (15%): {school_weighted_score}")
+print(f"Lab Weighted Score (20%): {lab_weighted_score}")
+print(f"Intuition Weighted Score (5%): {intuition_weighted_score}")
+print(f"\nGrand Total Weighted Score: {grand_total_weighted_score}")
 
  
 
